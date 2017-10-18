@@ -1,12 +1,12 @@
 # Coroutines
 
-A simulation of Conway's Game of Life with Coroutines.
+A simulation of Conway's Game of Life (GOL) with Coroutines.
 
 The development of this simulation was done as part of an assignment in "Computer Architecture" course at Ben-Gurion University in the second semester of 2016.
 
-A detailed description of the simulation can be found in the assignment desciption attached.
+A detailed description of the simulation can be found in the assignment description attached.
 
-## Coroutines
+## Gol coroutines 
 
 Wikipedia (link attached below): Coroutines are computer-program components that generalize subroutines for non-preemptive multitasking, by allowing multiple entry points for suspending and resuming execution at certain locations.
 
@@ -23,7 +23,7 @@ After doing so, it yields back to the scheduler coroutine.
 ### Scheduler
 
 The scheduler's role is about deciding which subroutine will run next among the array of subroutines.
-It does so by choosing the next cell's coroutine in a round robin fashion, and after fixed rounds of the cell's coroutines running (as described in details in the Assigment desciption attached), the scheduler calls the printer's coroutine.
+It does so by choosing the next cell's coroutine in a round robin fashion, and after fixed rounds of the cell's coroutines running (as described in details in the Assigment description attached), the scheduler calls the printer's coroutine.
 The scheduler holds a structure which pointing to each and every subroutine data holders.
 when a subroutine is scheduled for work, its stack, flags and register's data need to be restored. that is done with data holders.
 
@@ -31,7 +31,7 @@ when a subroutine is scheduled for work, its stack, flags and register's data ne
 
 In constrant to the other kinds of coroutines mentioned, this type is replicated for each and every cell on the board grid, meaning, each and every cell has its own coroutine with this coroutine type.
 This coroutine job is divided to two subjobs:
-The first one is deciding which if there should be a living organ in it in the next round. A detailed desciption of the decision making can be found in the 'Assigment desciption' file attached.
+The first one is deciding which if there should be a living organ in it in the next round. A detailed description of the decision making can be found in the 'Assigment description' file attached.
 The other part of the job is changing the actual state of the cell.
 This two subjobs are done intermittently. Every time the cell has finished one job it then yields back to the scheduler coroutine, when scheduler decides to let the cell's coroutine run once more it runs the other subjob and then yielding once more. This mechanism is done this way so every cell coroutine can decide what it's living organism state should be in the next round based on the last knwon state of the cells around it.
 
@@ -52,7 +52,7 @@ Note: this is how I used to build and run the program. There are many other well
 
 ### Running simulation
 
-A detailed description can be found in the assignment desciption file attached.
+A detailed description can be found in the assignment description file attached.
 
 ## Built With
 
