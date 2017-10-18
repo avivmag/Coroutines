@@ -57,7 +57,10 @@ Note: this is how I used to build and run the program. There are many other well
 
 ### Running simulation
 
-A detailed description can be found in the assignment description file attached.
+1. open terminal and navigate to the program directory
+2. Do this step only if simulation rebuilt is needed: type `make` and press enter.
+3. type `./gol <filename> <length> <width> <t> <k>` and press enter - you can find a detailed description of the needed parameters in the Assignment description file.
+4. enjoy :D.
 
 ## Built With
 
