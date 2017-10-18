@@ -8,11 +8,11 @@ A detailed description of the simulation can be found in the assignment descript
 
 ## Gol coroutines 
 
-Wikipedia (link attached below): Coroutines are computer-program components that generalize subroutines for non-preemptive multitasking, by allowing multiple entry points for suspending and resuming execution at certain locations.
+From Wikipedia (link attached below): "Coroutines are computer-program components that generalize subroutines for non-preemptive multitasking, by allowing multiple entry points for suspending and resuming execution at certain locations."
 
-Every subroutine has its own stack, flags and register's data.
-Every subroutine defines its own phase when it decide to yield.
-This simulation is built from 3 types of subroutines: scheduler, printer and cell.
+Every subroutine has its own stack, flags and register's data.</br>
+Every subroutine defines its own phase for a decision to yield.</br>
+This simulation is built from 3 types of subroutines: scheduler, printer and cell.</br>
 The role of each and every one of them is slightly different.
 
 ### Printer
