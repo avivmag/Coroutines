@@ -31,9 +31,13 @@ when a subroutine is scheduled for work, its stack, flags and register's data ne
 
 In contrast to the other types of coroutines mentioned, this type is replicated for each and every cell on the board grid, meaning, each and every cell has its own coroutine.</br>
 This coroutine job is divided to two subjobs:</br>
-The first one is deciding which if there should be a living organ in it in the next round. A detailed description of the decision making can be found in the 'Assigment description' file attached.
-The other part of the job is changing the actual state of the cell.
-This two subjobs are done intermittently. Every time the cell has finished one job it then yields back to the scheduler coroutine, when scheduler decides to let the cell's coroutine run once more it runs the other subjob and then yielding once more. This mechanism is done this way so every cell coroutine can decide what it's living organism state should be in the next round based on the last knwon state of the cells around it.
+The first one decides if there should (or shouldn't) be a living organism in its cell in the next round. A detailed description of the decision making can be found in the 'Assigment description' file attached.
+The other part of the job is changing the actual state of the cell based on the decision outcome.
+This two subjobs are done intermittently.</br>
+the cycle in which this two jobs run is as follows:</br>
+1. The cell's coroutine done with the first job and yields back to the scheduler coroutine.
+2. When the scheduler decides to let the cell's coroutine run once more, it runs the second subjob, then yielding once more.</br>
+This mechanism is done this way so every cell coroutine can decide what it's living organism state should be in the next round based on the last knwon state of the cells around it.
 
 ## Getting Started
 ### Prerequisites
