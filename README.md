@@ -38,7 +38,7 @@ the cycle in which this two jobs run is as follows:</br>
 1. The cell's coroutine done with the first job and yields back to the scheduler coroutine.
 2. When the scheduler decides to let the cell's coroutine run once more, it runs the second subjob, then yielding once more.
 
-This mechanism is done this way so every cell coroutine can decide what it's living organism state should be in the next round based on the last knwon state of the cells around it.
+This mechanism is done this way so every cell coroutine can decide what it's living organism state should be in the next round based on the last known state of the cells around it.
 
 ## Getting Started
 ### Prerequisites
